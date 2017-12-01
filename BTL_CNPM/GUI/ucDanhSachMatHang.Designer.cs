@@ -49,6 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,6 +76,7 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.simpleButton1);
             this.panel2.Controls.Add(this.simpleButton3);
             this.panel2.Controls.Add(this.simpleButton2);
             this.panel2.Location = new System.Drawing.Point(791, 420);
@@ -100,9 +102,9 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(242, 3);
+            this.simpleButton2.Location = new System.Drawing.Point(248, 3);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(248, 44);
+            this.simpleButton2.Size = new System.Drawing.Size(242, 44);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "Sửa";
             // 
@@ -262,6 +264,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm tên mặt hàng";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(3, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(239, 44);
+            this.simpleButton1.TabIndex = 13;
+            this.simpleButton1.Text = "Thêm";
+            // 
             // ucDanhSachMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +318,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
