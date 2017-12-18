@@ -165,6 +165,7 @@
             this.Name = "FrmLogin";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "ĐĂNG NHẬP";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
