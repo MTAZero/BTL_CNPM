@@ -263,7 +263,6 @@
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "QUẢN LÝ NHÀ HÀNG";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

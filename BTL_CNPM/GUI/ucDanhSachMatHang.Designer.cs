@@ -35,7 +35,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.imgAnh = new System.Windows.Forms.PictureBox();
             this.txtThanhPhan = new DevExpress.XtraEditors.MemoEdit();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.txtDonViTinh = new System.Windows.Forms.TextBox();
@@ -54,16 +53,20 @@
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonViTinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GiaBan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.linkChonAnh = new System.Windows.Forms.LinkLabel();
+            this.imgAnh = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTitleDonViTinh = new System.Windows.Forms.Label();
+            this.txtTitleTen = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanhPhan.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANGMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,8 +136,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.linkChonAnh);
-            this.groupBox3.Controls.Add(this.imgAnh);
+            this.groupBox3.Controls.Add(this.panel5);
             this.groupBox3.Controls.Add(this.txtThanhPhan);
             this.groupBox3.Controls.Add(this.txtGiaBan);
             this.groupBox3.Controls.Add(this.txtDonViTinh);
@@ -143,28 +145,16 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(794, 86);
+            this.groupBox3.Location = new System.Drawing.Point(794, 10);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(493, 328);
+            this.groupBox3.Size = new System.Drawing.Size(493, 410);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết mặt hàng";
             // 
-            // imgAnh
-            // 
-            this.imgAnh.BackColor = System.Drawing.Color.White;
-            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(367, 23);
-            this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(120, 164);
-            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAnh.TabIndex = 17;
-            this.imgAnh.TabStop = false;
-            this.imgAnh.WaitOnLoad = true;
-            // 
             // txtThanhPhan
             // 
-            this.txtThanhPhan.Location = new System.Drawing.Point(141, 235);
+            this.txtThanhPhan.Location = new System.Drawing.Point(129, 327);
             this.txtThanhPhan.Name = "txtThanhPhan";
             this.txtThanhPhan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.txtThanhPhan.Properties.Appearance.Options.UseFont = true;
@@ -174,21 +164,21 @@
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(141, 167);
+            this.txtGiaBan.Location = new System.Drawing.Point(129, 270);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(202, 24);
             this.txtGiaBan.TabIndex = 8;
             // 
             // txtDonViTinh
             // 
-            this.txtDonViTinh.Location = new System.Drawing.Point(141, 99);
+            this.txtDonViTinh.Location = new System.Drawing.Point(129, 216);
             this.txtDonViTinh.Name = "txtDonViTinh";
             this.txtDonViTinh.Size = new System.Drawing.Size(202, 24);
             this.txtDonViTinh.TabIndex = 7;
             // 
             // txtTenMatHang
             // 
-            this.txtTenMatHang.Location = new System.Drawing.Point(141, 31);
+            this.txtTenMatHang.Location = new System.Drawing.Point(129, 162);
             this.txtTenMatHang.Name = "txtTenMatHang";
             this.txtTenMatHang.Size = new System.Drawing.Size(202, 24);
             this.txtTenMatHang.TabIndex = 6;
@@ -196,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 238);
+            this.label5.Location = new System.Drawing.Point(23, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 5;
@@ -205,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 170);
+            this.label4.Location = new System.Drawing.Point(23, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 4;
@@ -214,7 +204,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 102);
+            this.label3.Location = new System.Drawing.Point(23, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 3;
@@ -223,7 +213,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 34);
+            this.label2.Location = new System.Drawing.Point(23, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 2;
@@ -354,16 +344,52 @@
             this.GiaBan.VisibleIndex = 3;
             this.GiaBan.Width = 287;
             // 
-            // linkChonAnh
+            // imgAnh
             // 
-            this.linkChonAnh.AutoSize = true;
-            this.linkChonAnh.Location = new System.Drawing.Point(396, 197);
-            this.linkChonAnh.Name = "linkChonAnh";
-            this.linkChonAnh.Size = new System.Drawing.Size(64, 17);
-            this.linkChonAnh.TabIndex = 18;
-            this.linkChonAnh.TabStop = true;
-            this.linkChonAnh.Text = "Chọn ảnh";
-            this.linkChonAnh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkChonAnh_LinkClicked);
+            this.imgAnh.BackColor = System.Drawing.Color.White;
+            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgAnh.Location = new System.Drawing.Point(13, 5);
+            this.imgAnh.Name = "imgAnh";
+            this.imgAnh.Size = new System.Drawing.Size(186, 112);
+            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAnh.TabIndex = 18;
+            this.imgAnh.TabStop = false;
+            this.imgAnh.WaitOnLoad = true;
+            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txtTitleDonViTinh);
+            this.panel5.Controls.Add(this.imgAnh);
+            this.panel5.Controls.Add(this.txtTitleTen);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(487, 127);
+            this.panel5.TabIndex = 19;
+            // 
+            // txtTitleDonViTinh
+            // 
+            this.txtTitleDonViTinh.AutoSize = true;
+            this.txtTitleDonViTinh.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleDonViTinh.Location = new System.Drawing.Point(218, 75);
+            this.txtTitleDonViTinh.Name = "txtTitleDonViTinh";
+            this.txtTitleDonViTinh.Size = new System.Drawing.Size(34, 17);
+            this.txtTitleDonViTinh.TabIndex = 2;
+            this.txtTitleDonViTinh.Text = "Suất";
+            // 
+            // txtTitleTen
+            // 
+            this.txtTitleTen.AutoSize = true;
+            this.txtTitleTen.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitleTen.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleTen.Location = new System.Drawing.Point(214, 36);
+            this.txtTitleTen.Name = "txtTitleTen";
+            this.txtTitleTen.Size = new System.Drawing.Size(139, 39);
+            this.txtTitleTen.TabIndex = 1;
+            this.txtTitleTen.Text = "Bánh xèo";
             // 
             // ucDanhSachMatHang
             // 
@@ -377,13 +403,15 @@
             this.panel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanhPhan.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANGMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -408,13 +436,15 @@
         private System.Windows.Forms.TextBox txtTenMatHang;
         private DevExpress.XtraEditors.MemoEdit txtThanhPhan;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private System.Windows.Forms.PictureBox imgAnh;
         private DevExpress.XtraGrid.GridControl dgvMATHANGMain;
         private DevExpress.XtraGrid.Views.Grid.GridView dgvMATHANG;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn Ten;
         private DevExpress.XtraGrid.Columns.GridColumn DonViTinh;
         private DevExpress.XtraGrid.Columns.GridColumn GiaBan;
-        private System.Windows.Forms.LinkLabel linkChonAnh;
+        private System.Windows.Forms.PictureBox imgAnh;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label txtTitleDonViTinh;
+        private System.Windows.Forms.Label txtTitleTen;
     }
 }

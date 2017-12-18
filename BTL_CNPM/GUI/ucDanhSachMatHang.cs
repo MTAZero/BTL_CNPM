@@ -118,6 +118,9 @@ namespace BTL_CNPM.GUI
             txtThanhPhan.Text = "";
             txtGiaBan.Text = "";
             imgAnh.Image = null;
+
+            txtTitleTen.Text = "";
+            txtDonViTinh.Text = "";
         }
 
         private void UpdateDetail()
@@ -132,6 +135,9 @@ namespace BTL_CNPM.GUI
                 txtDonViTinh.Text = tg.DONVITINH;
                 txtThanhPhan.Text = tg.THANHPHAN;
                 txtGiaBan.Text = tg.GIABAN.ToString();
+
+                txtTitleTen.Text = tg.TEN;
+                txtTitleDonViTinh.Text = tg.DONVITINH;
 
                 imgAnh.Image = null;
                 imgAnh.Image = Helper.byteArrayToImage(tg.ANH);
@@ -148,7 +154,7 @@ namespace BTL_CNPM.GUI
             txtDonViTinh.Enabled = false;
             txtGiaBan.Enabled = false;
             txtThanhPhan.Enabled = false;
-            linkChonAnh.Enabled = false;
+            imgAnh.Enabled = false;
             
             dgvMATHANGMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -164,7 +170,7 @@ namespace BTL_CNPM.GUI
             txtDonViTinh.Enabled = true;
             txtGiaBan.Enabled = true;
             txtThanhPhan.Enabled = true;
-            linkChonAnh.Enabled = true;
+            imgAnh.Enabled = true;
 
             dgvMATHANGMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -374,7 +380,7 @@ namespace BTL_CNPM.GUI
             }
         }
 
-        private void linkChonAnh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void imgAnh_Click(object sender, EventArgs e)
         {
             string path = "";
             try
@@ -400,6 +406,7 @@ namespace BTL_CNPM.GUI
                 return;
             }
         }
+
         #endregion
 
         #region Sự kiện ngầm
@@ -410,7 +417,6 @@ namespace BTL_CNPM.GUI
         }
 
         
-
         private void dgvMatHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             UpdateDetail();
