@@ -42,7 +42,7 @@ namespace BTL_CNPM.GUI
                                HoTen = p.TEN,
                                ChucVu = (p.CHUCVU == 0) ? "Nhân viên" : "Quản trị viên"
                            })
-                                        .ToList();
+                           .ToList();
             dgvNhanVienMain.DataSource = listNv.ToList()
                                          .Where(p => p.HoTen.ToUpper().Contains(keyWord) || p.ChucVu.ToUpper().Contains(keyWord))
                                          .Select(p => new

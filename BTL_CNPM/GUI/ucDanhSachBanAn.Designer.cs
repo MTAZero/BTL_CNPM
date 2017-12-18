@@ -32,31 +32,31 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSoCho = new System.Windows.Forms.TextBox();
+            this.txtViTri = new DevExpress.XtraEditors.MemoEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenBan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvBanAnMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvBanAn = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtViTri.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanAnMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanAn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +74,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,58 +87,58 @@
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.simpleButton1);
-            this.panel3.Controls.Add(this.simpleButton3);
-            this.panel3.Controls.Add(this.simpleButton2);
+            this.panel3.Controls.Add(this.btnThem);
+            this.panel3.Controls.Add(this.btnXoa);
+            this.panel3.Controls.Add(this.btnSua);
             this.panel3.Location = new System.Drawing.Point(713, 292);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(576, 50);
             this.panel3.TabIndex = 7;
             // 
-            // simpleButton1
+            // btnThem
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(182, 44);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(3, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(182, 44);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
             // 
-            // simpleButton3
+            // btnXoa
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(391, 3);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(182, 44);
-            this.simpleButton3.TabIndex = 6;
-            this.simpleButton3.Text = "Xóa";
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(391, 3);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(182, 44);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "Xóa";
             // 
-            // simpleButton2
+            // btnSua
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(197, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(182, 44);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Sửa";
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.Location = new System.Drawing.Point(197, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(182, 44);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "Sửa";
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.memoEdit1);
+            this.groupBox2.Controls.Add(this.txtSoCho);
+            this.groupBox2.Controls.Add(this.txtViTri);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtTenBan);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(713, 64);
             this.groupBox2.Name = "groupBox2";
@@ -147,12 +147,47 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết bàn ăn";
             // 
-            // textBox2
+            // txtSoCho
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(342, 24);
-            this.textBox2.TabIndex = 1;
+            this.txtSoCho.Location = new System.Drawing.Point(145, 88);
+            this.txtSoCho.Name = "txtSoCho";
+            this.txtSoCho.Size = new System.Drawing.Size(88, 24);
+            this.txtSoCho.TabIndex = 17;
+            // 
+            // txtViTri
+            // 
+            this.txtViTri.Location = new System.Drawing.Point(145, 140);
+            this.txtViTri.Name = "txtViTri";
+            this.txtViTri.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtViTri.Properties.Appearance.Options.UseFont = true;
+            this.txtViTri.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtViTri.Size = new System.Drawing.Size(402, 68);
+            this.txtViTri.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(41, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Vị trí :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Số chỗ :";
+            // 
+            // txtTenBan
+            // 
+            this.txtTenBan.Location = new System.Drawing.Point(145, 37);
+            this.txtTenBan.Name = "txtTenBan";
+            this.txtTenBan.Size = new System.Drawing.Size(342, 24);
+            this.txtTenBan.TabIndex = 1;
             // 
             // label2
             // 
@@ -163,12 +198,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên bàn :";
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 24);
-            this.textBox1.TabIndex = 2;
+            this.txtTimKiem.Location = new System.Drawing.Point(171, 25);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(405, 24);
+            this.txtTimKiem.TabIndex = 2;
             // 
             // label1
             // 
@@ -184,7 +219,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.gridControl1);
+            this.groupBox1.Controls.Add(this.dgvBanAnMain);
             this.groupBox1.Location = new System.Drawing.Point(26, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(663, 462);
@@ -192,44 +227,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bàn ăn";
             // 
-            // gridControl1
+            // dgvBanAnMain
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(657, 439);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvBanAnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBanAnMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvBanAnMain.MainView = this.dgvBanAn;
+            this.dgvBanAnMain.Name = "dgvBanAnMain";
+            this.dgvBanAnMain.Size = new System.Drawing.Size(657, 439);
+            this.dgvBanAnMain.TabIndex = 1;
+            this.dgvBanAnMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvBanAn});
             // 
-            // gridView1
+            // dgvBanAn
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.gridView1.ColumnPanelRowHeight = 30;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvBanAn.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBanAn.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvBanAn.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvBanAn.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvBanAn.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBanAn.Appearance.Row.Options.UseFont = true;
+            this.dgvBanAn.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvBanAn.ColumnPanelRowHeight = 30;
+            this.dgvBanAn.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.STT,
             this.Ten});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
-            this.gridView1.OptionsCustomization.AllowGroup = false;
-            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView1.OptionsFind.AllowFindPanel = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.PaintStyleName = "UltraFlat";
-            this.gridView1.RowHeight = 30;
+            this.dgvBanAn.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvBanAn.GridControl = this.dgvBanAnMain;
+            this.dgvBanAn.Name = "dgvBanAn";
+            this.dgvBanAn.OptionsBehavior.Editable = false;
+            this.dgvBanAn.OptionsBehavior.ReadOnly = true;
+            this.dgvBanAn.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvBanAn.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvBanAn.OptionsCustomization.AllowFilter = false;
+            this.dgvBanAn.OptionsCustomization.AllowGroup = false;
+            this.dgvBanAn.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvBanAn.OptionsFind.AllowFindPanel = false;
+            this.dgvBanAn.OptionsView.ShowGroupPanel = false;
+            this.dgvBanAn.PaintStyleName = "UltraFlat";
+            this.dgvBanAn.RowHeight = 30;
             // 
             // STT
             // 
@@ -241,46 +276,11 @@
             // 
             // Ten
             // 
-            this.Ten.Caption = "Thể loại";
+            this.Ten.Caption = "Tên bàn ăn";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
             this.Ten.Width = 584;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Số chỗ :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Vị trí :";
-            // 
-            // memoEdit1
-            // 
-            this.memoEdit1.Location = new System.Drawing.Point(145, 140);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.memoEdit1.Properties.Appearance.Options.UseFont = true;
-            this.memoEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.memoEdit1.Size = new System.Drawing.Size(402, 68);
-            this.memoEdit1.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(145, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(88, 24);
-            this.textBox3.TabIndex = 17;
             // 
             // ucDanhSachBanAn
             // 
@@ -295,10 +295,10 @@
             this.panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtViTri.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanAnMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBanAn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,22 +308,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenBan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl dgvBanAnMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvBanAn;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn Ten;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private System.Windows.Forms.TextBox textBox3;
+        private DevExpress.XtraEditors.MemoEdit txtViTri;
+        private System.Windows.Forms.TextBox txtSoCho;
     }
 }

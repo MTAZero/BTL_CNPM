@@ -30,14 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdTenMatHang = new System.Windows.Forms.RadioButton();
+            this.rdSoLuongTieuThu = new System.Windows.Forms.RadioButton();
+            this.rdGiaBan = new System.Windows.Forms.RadioButton();
+            this.rdSoLuong = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgvKho = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -60,10 +60,10 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.rdTenMatHang);
+            this.groupBox3.Controls.Add(this.rdSoLuongTieuThu);
+            this.groupBox3.Controls.Add(this.rdGiaBan);
+            this.groupBox3.Controls.Add(this.rdSoLuong);
             this.groupBox3.Location = new System.Drawing.Point(15, 159);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(280, 206);
@@ -71,56 +71,56 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thứ tự ưu tiên";
             // 
-            // radioButton4
+            // rdTenMatHang
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(18, 161);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(107, 21);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Tên mặt hàng";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdTenMatHang.AutoSize = true;
+            this.rdTenMatHang.Location = new System.Drawing.Point(18, 161);
+            this.rdTenMatHang.Name = "rdTenMatHang";
+            this.rdTenMatHang.Size = new System.Drawing.Size(107, 21);
+            this.rdTenMatHang.TabIndex = 3;
+            this.rdTenMatHang.TabStop = true;
+            this.rdTenMatHang.Text = "Tên mặt hàng";
+            this.rdTenMatHang.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdSoLuongTieuThu
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(18, 75);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(125, 21);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Số lượng tiêu thụ";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdSoLuongTieuThu.AutoSize = true;
+            this.rdSoLuongTieuThu.Location = new System.Drawing.Point(18, 75);
+            this.rdSoLuongTieuThu.Name = "rdSoLuongTieuThu";
+            this.rdSoLuongTieuThu.Size = new System.Drawing.Size(125, 21);
+            this.rdSoLuongTieuThu.TabIndex = 2;
+            this.rdSoLuongTieuThu.TabStop = true;
+            this.rdSoLuongTieuThu.Text = "Số lượng tiêu thụ";
+            this.rdSoLuongTieuThu.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdGiaBan
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 118);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Giá bán";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdGiaBan.AutoSize = true;
+            this.rdGiaBan.Location = new System.Drawing.Point(18, 118);
+            this.rdGiaBan.Name = "rdGiaBan";
+            this.rdGiaBan.Size = new System.Drawing.Size(71, 21);
+            this.rdGiaBan.TabIndex = 1;
+            this.rdGiaBan.TabStop = true;
+            this.rdGiaBan.Text = "Giá bán";
+            this.rdGiaBan.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdSoLuong
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 32);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(137, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Số lượng trong kho";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdSoLuong.AutoSize = true;
+            this.rdSoLuong.Location = new System.Drawing.Point(18, 32);
+            this.rdSoLuong.Name = "rdSoLuong";
+            this.rdSoLuong.Size = new System.Drawing.Size(137, 21);
+            this.rdSoLuong.TabIndex = 0;
+            this.rdSoLuong.TabStop = true;
+            this.rdSoLuong.Text = "Số lượng trong kho";
+            this.rdSoLuong.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox2.Controls.Add(this.dgvKho);
             this.groupBox2.Location = new System.Drawing.Point(314, 15);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(970, 511);
@@ -128,18 +128,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách mặt hàng";
             // 
-            // flowLayoutPanel1
+            // dgvKho
             // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 20);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(964, 488);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.dgvKho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dgvKho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKho.Location = new System.Drawing.Point(3, 20);
+            this.dgvKho.Name = "dgvKho";
+            this.dgvKho.Size = new System.Drawing.Size(964, 488);
+            this.dgvKho.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
@@ -148,12 +148,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 24);
-            this.textBox1.TabIndex = 1;
+            this.txtTimKiem.Location = new System.Drawing.Point(18, 54);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(244, 24);
+            this.txtTimKiem.TabIndex = 1;
             // 
             // label1
             // 
@@ -186,13 +186,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.FlowLayoutPanel dgvKho;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rdSoLuongTieuThu;
+        private System.Windows.Forms.RadioButton rdGiaBan;
+        private System.Windows.Forms.RadioButton rdSoLuong;
+        private System.Windows.Forms.RadioButton rdTenMatHang;
     }
 }
