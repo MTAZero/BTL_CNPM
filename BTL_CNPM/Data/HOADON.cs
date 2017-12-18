@@ -13,6 +13,7 @@ namespace BTL_CNPM.Data
         public HOADON()
         {
             BANANs = new HashSet<BANAN>();
+            CHITIETHOADONs = new HashSet<CHITIETHOADON>();
         }
 
         public int ID { get; set; }
@@ -27,6 +28,9 @@ namespace BTL_CNPM.Data
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BANAN> BANANs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
 
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

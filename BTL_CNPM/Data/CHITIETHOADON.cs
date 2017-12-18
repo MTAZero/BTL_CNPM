@@ -19,6 +19,10 @@ namespace BTL_CNPM.Data
 
         public int? THANHTIEN { get; set; }
 
+        public int HOADONID { get; set; }
+
         public virtual MATHANG MATHANG { get; set; }
+
+        public virtual HOADON HOADON { get; set; }
     }
 }

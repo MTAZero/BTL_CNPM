@@ -234,6 +234,7 @@ namespace BTL_CNPM.GUI
                     LockControl();
 
                     BANAN moi = getBANANByForm();
+                    moi.TRANGTHAI = 0;
                     db.BANANs.Add(moi);
 
                     try

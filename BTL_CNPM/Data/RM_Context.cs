@@ -24,6 +24,10 @@ namespace BTL_CNPM.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<HOADON>()
+                .HasMany(e => e.CHITIETHOADONs)
+                .WithRequired(e => e.HOADON)
+                .WillCascadeOnDelete(false);
         }
     }
 }

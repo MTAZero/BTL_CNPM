@@ -37,6 +37,7 @@
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -119,6 +120,12 @@
     <Compile Include="GUI\FrmThongTinNhaHang.Designer.cs">
       <DependentUpon>FrmThongTinNhaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucBanAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBanAn.Designer.cs">
+      <DependentUpon>ucBanAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ucBanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +198,9 @@
     <EmbeddedResource Include="GUI\FrmThongTinNhaHang.resx">
       <DependentUpon>FrmThongTinNhaHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBanAn.resx">
+      <DependentUpon>ucBanAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +264,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.txt" />
+    <None Include="Resources\free.png" />
+    <None Include="Resources\busy.png" />
+    <None Include="Resources\btnBanAn.Image.png" />
+    <None Include="Resources\b.png" />
+    <None Include="Resources\free.bmp" />
+    <None Include="Resources\Busy.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
