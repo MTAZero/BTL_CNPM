@@ -116,7 +116,7 @@
             this.btnXoa.Location = new System.Drawing.Point(3, 53);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(487, 44);
-            this.btnXoa.TabIndex = 12;
+            this.btnXoa.TabIndex = 15;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -129,7 +129,7 @@
             this.btnSua.Location = new System.Drawing.Point(248, 3);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(242, 44);
-            this.btnSua.TabIndex = 11;
+            this.btnSua.TabIndex = 14;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 

@@ -120,7 +120,9 @@ namespace BTL_CNPM.GUI
             imgAnh.Image = null;
 
             txtTitleTen.Text = "";
-            txtDonViTinh.Text = "";
+            txtTitleDonViTinh.Text = "";
+
+            
         }
 
         private void UpdateDetail()
@@ -266,6 +268,13 @@ namespace BTL_CNPM.GUI
                     try
                     {
                         db.SaveChanges();
+
+                        KHO kho = new KHO();
+                        kho.MATHANGID = moi.ID;
+                        kho.SOLUONG = 0;
+                        db.KHOes.Add(kho);
+                        db.SaveChanges();
+
                         MessageBox.Show("Thêm thông tin mặt hàng thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
