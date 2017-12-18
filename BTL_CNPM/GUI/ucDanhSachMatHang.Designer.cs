@@ -35,6 +35,10 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTitleDonViTinh = new System.Windows.Forms.Label();
+            this.imgAnh = new System.Windows.Forms.PictureBox();
+            this.txtTitleTen = new System.Windows.Forms.Label();
             this.txtThanhPhan = new DevExpress.XtraEditors.MemoEdit();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.txtDonViTinh = new System.Windows.Forms.TextBox();
@@ -44,29 +48,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvMATHANGMain = new DevExpress.XtraGrid.GridControl();
             this.dgvMATHANG = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonViTinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GiaBan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.imgAnh = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtTitleDonViTinh = new System.Windows.Forms.Label();
-            this.txtTitleTen = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanhPhan.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANGMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,6 +152,53 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết mặt hàng";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txtTitleDonViTinh);
+            this.panel5.Controls.Add(this.imgAnh);
+            this.panel5.Controls.Add(this.txtTitleTen);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(487, 127);
+            this.panel5.TabIndex = 19;
+            // 
+            // txtTitleDonViTinh
+            // 
+            this.txtTitleDonViTinh.AutoSize = true;
+            this.txtTitleDonViTinh.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleDonViTinh.Location = new System.Drawing.Point(218, 75);
+            this.txtTitleDonViTinh.Name = "txtTitleDonViTinh";
+            this.txtTitleDonViTinh.Size = new System.Drawing.Size(34, 17);
+            this.txtTitleDonViTinh.TabIndex = 2;
+            this.txtTitleDonViTinh.Text = "Suất";
+            // 
+            // imgAnh
+            // 
+            this.imgAnh.BackColor = System.Drawing.Color.White;
+            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgAnh.Location = new System.Drawing.Point(13, 5);
+            this.imgAnh.Name = "imgAnh";
+            this.imgAnh.Size = new System.Drawing.Size(186, 112);
+            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAnh.TabIndex = 18;
+            this.imgAnh.TabStop = false;
+            this.imgAnh.WaitOnLoad = true;
+            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
+            // 
+            // txtTitleTen
+            // 
+            this.txtTitleTen.AutoSize = true;
+            this.txtTitleTen.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitleTen.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleTen.Location = new System.Drawing.Point(214, 36);
+            this.txtTitleTen.Name = "txtTitleTen";
+            this.txtTitleTen.Size = new System.Drawing.Size(139, 39);
+            this.txtTitleTen.TabIndex = 1;
+            this.txtTitleTen.Text = "Bánh xèo";
+            // 
             // txtThanhPhan
             // 
             this.txtThanhPhan.Location = new System.Drawing.Point(129, 327);
@@ -231,34 +278,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách mặt hàng";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtTimKiem);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(20, 10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(562, 70);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(186, 26);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(329, 24);
-            this.txtTimKiem.TabIndex = 1;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tìm kiếm tên mặt hàng";
             // 
             // dgvMATHANGMain
             // 
@@ -344,52 +363,33 @@
             this.GiaBan.VisibleIndex = 3;
             this.GiaBan.Width = 287;
             // 
-            // imgAnh
+            // groupBox1
             // 
-            this.imgAnh.BackColor = System.Drawing.Color.White;
-            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(13, 5);
-            this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(186, 112);
-            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAnh.TabIndex = 18;
-            this.imgAnh.TabStop = false;
-            this.imgAnh.WaitOnLoad = true;
-            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(20, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(562, 70);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm";
             // 
-            // panel5
+            // txtTimKiem
             // 
-            this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.txtTitleDonViTinh);
-            this.panel5.Controls.Add(this.imgAnh);
-            this.panel5.Controls.Add(this.txtTitleTen);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(3, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(487, 127);
-            this.panel5.TabIndex = 19;
+            this.txtTimKiem.Location = new System.Drawing.Point(186, 26);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(329, 24);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
-            // txtTitleDonViTinh
+            // label1
             // 
-            this.txtTitleDonViTinh.AutoSize = true;
-            this.txtTitleDonViTinh.ForeColor = System.Drawing.Color.Black;
-            this.txtTitleDonViTinh.Location = new System.Drawing.Point(218, 75);
-            this.txtTitleDonViTinh.Name = "txtTitleDonViTinh";
-            this.txtTitleDonViTinh.Size = new System.Drawing.Size(34, 17);
-            this.txtTitleDonViTinh.TabIndex = 2;
-            this.txtTitleDonViTinh.Text = "Suất";
-            // 
-            // txtTitleTen
-            // 
-            this.txtTitleTen.AutoSize = true;
-            this.txtTitleTen.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitleTen.ForeColor = System.Drawing.Color.Black;
-            this.txtTitleTen.Location = new System.Drawing.Point(214, 36);
-            this.txtTitleTen.Name = "txtTitleTen";
-            this.txtTitleTen.Size = new System.Drawing.Size(139, 39);
-            this.txtTitleTen.TabIndex = 1;
-            this.txtTitleTen.Text = "Bánh xèo";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tìm kiếm tên mặt hàng";
             // 
             // ucDanhSachMatHang
             // 
@@ -403,15 +403,15 @@
             this.panel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThanhPhan.Properties)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANGMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThanhPhan.Properties)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANGMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMATHANG)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
