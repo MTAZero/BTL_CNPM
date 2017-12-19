@@ -284,6 +284,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\FrmRpHoaDon.resx">
+      <DependentUpon>FrmRpHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpPhieuNhap.resx">
       <DependentUpon>FrmRpPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,7 +23,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>1.83155cm</Top>
+        <Top>1.5846cm</Top>
         <Left>0.47307cm</Left>
         <Height>0.73229cm</Height>
         <Width>19.99776cm</Width>
@@ -117,14 +117,43 @@
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                     </Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Khuyến mại : </Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PhanTramKhuyenMai.Value</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.66967cm</Top>
+        <Top>2.49328cm</Top>
         <Left>0.47307cm</Left>
-        <Height>1.73771cm</Height>
+        <Height>2.20514cm</Height>
         <Width>19.99776cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -779,8 +808,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>HoaDon</DataSetName>
-        <Top>4.58376cm</Top>
-        <Left>0.47307cm</Left>
+        <Top>4.7337cm</Top>
+        <Left>0.43779cm</Left>
         <Height>1.35876cm</Height>
         <Width>19.99776cm</Width>
         <ZIndex>2</ZIndex>
@@ -797,7 +826,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tổng tiền : </Value>
+                <Value>Tổng tiền     : </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -809,8 +838,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.22474cm</Top>
-        <Left>13.94027cm</Left>
+        <Top>6.37468cm</Top>
+        <Left>13.90499cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>3</ZIndex>
@@ -853,8 +882,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.22474cm</Top>
-        <Left>16.5091cm</Left>
+        <Top>6.37468cm</Top>
+        <Left>16.47382cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>4</ZIndex>
@@ -918,7 +947,7 @@
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.28787cm</Top>
         <Left>0.47307cm</Left>
-        <Height>1.36729cm</Height>
+        <Height>1.15562cm</Height>
         <Width>19.99776cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -952,10 +981,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>8.94195cm</Top>
-        <Left>0.50835cm</Left>
+        <Top>8.63328cm</Top>
+        <Left>0.48608cm</Left>
         <Height>0.67938cm</Height>
-        <Width>19.99776cm</Width>
+        <Width>20.03304cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -974,7 +1003,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Khuyến mại: </Value>
+                <Value>Khuyến mại : </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -986,8 +1015,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.10696cm</Top>
-        <Left>13.94027cm</Left>
+        <Top>7.08051cm</Top>
+        <Left>13.90499cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>7</ZIndex>
@@ -1030,8 +1059,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.10696cm</Top>
-        <Left>16.5091cm</Left>
+        <Top>7.08051cm</Top>
+        <Left>16.47382cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>8</ZIndex>
@@ -1046,8 +1075,8 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>7.88335cm</Top>
-        <Left>20.50611cm</Left>
+        <Top>7.78634cm</Top>
+        <Left>20.38726cm</Left>
         <Height>0cm</Height>
         <Width>-6.48227cm</Width>
         <ZIndex>9</ZIndex>
@@ -1064,7 +1093,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Thanh toán: </Value>
+                <Value>Thanh toán  : </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -1076,8 +1105,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.05974cm</Top>
-        <Left>13.94027cm</Left>
+        <Top>7.8569cm</Top>
+        <Left>13.90499cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>10</ZIndex>
@@ -1120,8 +1149,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.05974cm</Top>
-        <Left>16.5091cm</Left>
+        <Top>7.8569cm</Top>
+        <Left>16.47382cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>11</ZIndex>
@@ -1136,7 +1165,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>10.19625cm</Height>
+    <Height>9.93167cm</Height>
     <Style />
   </Body>
   <Width>21cm</Width>
@@ -1236,6 +1265,10 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="ThanhToan">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PhanTramKhuyenMai">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

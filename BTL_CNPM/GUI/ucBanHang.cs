@@ -226,6 +226,8 @@ namespace BTL_CNPM.GUI
                 if (rs == DialogResult.OK)
                 {
                     /// xuất report hóa đơn
+                     
+
                     MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
