@@ -16,6 +16,7 @@ namespace BTL_CNPM.GUI
     {
         private RM_Context db = Helper.db;
         private int IDBanAn = 0;
+        private BANAN banan = new BANAN();
 
         #region Hàm khởi tạo
         public ucBanHang()
@@ -63,6 +64,19 @@ namespace BTL_CNPM.GUI
             UpdateDetail((int)button.Tag);
         }
 
+        private void UpdateDsBanAn()
+        {
+            try
+            {
+                foreach (var item in panelDsBanAn.Controls)
+                {
+                    ucBanAn uc = item as ucBanAn;
+                    uc.Refresh();
+                }
+            }
+            catch { }
+        }
+
         private void LoadInitControl()
         {
             try
@@ -91,6 +105,7 @@ namespace BTL_CNPM.GUI
             try
             {
                 cbxCBBanAn.Properties.DataSource = db.BANANs.Where(p => p.TRANGTHAI == 0).ToList()
+                                                   .Where(p=>p.ID != IDBanAn)
                                                    .Select(p => new
                                                    {
                                                        ID = p.ID,
@@ -106,6 +121,24 @@ namespace BTL_CNPM.GUI
 
         private void ucBanHang_Load(object sender, EventArgs e)
         {
+            if (db.MATHANGs.ToList().Count == 0)
+            {
+                MessageBox.Show("Danh sách mặt hàng đang trống\nVui lòng thêm mặt hàng ở mục quản trị",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                this.Hide();
+            }
+
+            if (db.BANANs.ToList().Count == 0)
+            {
+                MessageBox.Show("Danh sách bàn ăn đang trống\nVui lòng thêm bàn ăn ở mục quản trị",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                this.Hide();
+            }
+
             LoadInitControl();
             ClearControl();
             LoadDsBanAn();
@@ -121,8 +154,10 @@ namespace BTL_CNPM.GUI
                 if (ba == null) return;
 
                 IDBanAn = ID;
+                banan = ba;
                 txtTenBanAn.Text = ba.TEN + " : ";
 
+                LoadBanTrong();
                 ClearControl();
                 if (ba.TRANGTHAI == 0) return;
 
@@ -144,6 +179,289 @@ namespace BTL_CNPM.GUI
         {
             txtTongTien.Text = "0";
             dgvHoaDonMain.DataSource = null;
+        }
+        #endregion
+
+        #region Sự kiện
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            /// kiểm tra đã có bàn ăn nào được chọn chưa
+            if(IDBanAn == 0)
+            {
+                MessageBox.Show("Chưa có bàn ăn nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            /// Kiểm tra xem bàn ăn là bàn đã có khách hay chưa có khách
+            BANAN banan = db.BANANs.Where(p => p.ID == IDBanAn).FirstOrDefault();
+            if (banan.HOADONID == null)
+            {
+                MessageBox.Show("Bàn ăn không có khách",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            /// Kiểm tra lại xem đã muốn thanh toán chưa
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn thanh toán và in hóa đơn?",
+                                              "Thông báo",
+                                              MessageBoxButtons.OKCancel,
+                                              MessageBoxIcon.Question);
+
+            if (rs == DialogResult.Cancel) return;
+
+            try
+            {
+                banan.TRANGTHAI = 0;
+                banan.HOADONID = null;
+                db.SaveChanges();
+
+                if (rs == DialogResult.OK)
+                {
+                    /// xuất report hóa đơn
+                    MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                UpdateDsBanAn();
+            }
+            catch
+            {
+                MessageBox.Show("Thanh toán thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGoiMon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                /// Kiểm tra bàn ăn xem đã được chọn chưa
+                if (IDBanAn == 0)
+                {
+                    MessageBox.Show("Chưa có bàn ăn nào được chọn",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                int idMatHang = (int) cbxGMMatHang.EditValue;
+                MATHANG mathang = db.MATHANGs.Where(p => p.ID == idMatHang).FirstOrDefault();
+                int SoLuongGM = (int) txtGMSoLuong.Value;
+                int SoLuong = (int) db.KHOes.Where(p => p.MATHANGID == idMatHang).FirstOrDefault().SOLUONG;
+
+                // Kiểm tra kho
+                if (SoLuong < SoLuongGM)
+                {
+                    MessageBox.Show("Không đủ hàng (" + SoLuong + ")",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                /// Trừ số lượng trong kho
+                KHO kho = db.KHOes.Where(p => p.MATHANGID == idMatHang).FirstOrDefault();
+                kho.SOLUONG -= SoLuongGM;
+
+                if (banan.HOADONID == null)
+                {
+                    // nếu bàn ăn này chưa chứa hóa đơn nào
+                    HOADON hd = new HOADON();
+                    hd.NGAYNHAP = DateTime.Now;
+                    hd.TONGTIEN = 0;
+                    hd.NHANVIENID = Helper.nhanvien.ID;
+                    hd.MAHOADON = "";
+                    db.HOADONs.Add(hd);
+                    db.SaveChanges();
+
+                    hd.MAHOADON = "HD" + hd.ID;
+                    banan.TRANGTHAI = 1;
+                    banan.HOADONID = hd.ID;
+                    db.SaveChanges();
+
+                    CHITIETHOADON chitiet = new CHITIETHOADON();
+                    chitiet.HOADONID = hd.ID;
+                    chitiet.SOLUONG = SoLuongGM;
+                    chitiet.MATHANGID = mathang.ID;
+                    chitiet.DONGIA = mathang.GIABAN;
+                    chitiet.THANHTIEN = chitiet.DONGIA * chitiet.SOLUONG;
+                    db.CHITIETHOADONs.Add(chitiet);
+                    hd.TONGTIEN = chitiet.THANHTIEN;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    // nếu bàn ăn này đã chứa hóa đơn
+                    HOADON hd = db.HOADONs.Where(p => p.ID == banan.HOADONID).FirstOrDefault();
+
+                    var listChiTiet = db.CHITIETHOADONs.Where(p => p.HOADONID == hd.ID).ToList();
+                    CHITIETHOADON chitiet;
+                    chitiet = listChiTiet.Where(p => p.MATHANGID == mathang.ID).FirstOrDefault();
+
+                    if (chitiet == null)
+                    {
+                        /// Nếu sản phẩm này chưa từng được thêm vào hóa đơn
+                        chitiet = new CHITIETHOADON();
+                        chitiet.HOADONID = hd.ID;
+                        chitiet.SOLUONG = SoLuongGM;
+                        chitiet.MATHANGID = mathang.ID;
+                        chitiet.DONGIA = mathang.GIABAN;
+                        chitiet.THANHTIEN = chitiet.DONGIA * chitiet.SOLUONG;
+                        db.CHITIETHOADONs.Add(chitiet);
+
+                        hd.TONGTIEN += chitiet.THANHTIEN;
+
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        /// Nếu sản phẩm này đã từng được thêm thì tăng số lượng
+                        chitiet.SOLUONG += SoLuongGM;
+                        chitiet.THANHTIEN = SoLuongGM * chitiet.DONGIA;
+                        hd.TONGTIEN += chitiet.THANHTIEN;
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                UpdateDsBanAn();
+                UpdateDetail(IDBanAn);
+            }
+            
+        }
+
+        private void btnTraMon_Click(object sender, EventArgs e)
+        {
+            if (IDBanAn == 0)
+            {
+                MessageBox.Show("Chưa có bàn ăn nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            /// Kiểm tra xem bàn ăn là bàn đã có khách hay chưa có khách
+            BANAN banan = db.BANANs.Where(p => p.ID == IDBanAn).FirstOrDefault();
+            if (banan.HOADONID == null)
+            {
+                MessageBox.Show("Bàn ăn không có khách",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            /// Kiểm tra món ăn đang lựa chọn
+            HOADON hd = db.HOADONs.Where(p => p.ID == banan.HOADONID).FirstOrDefault();
+
+            int idChiTiet;
+            try
+            {
+                idChiTiet = (int)dgvHoaDon.GetFocusedRowCellValue("ID");  
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có mặt hàng nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            CHITIETHOADON chitiet = db.CHITIETHOADONs.Where(p => p.ID == idChiTiet).FirstOrDefault();
+
+            int SoLuong = (int) chitiet.SOLUONG;
+            int SoLuongTraMon = (int)txtTMSoLuong.Value;
+
+            if (SoLuongTraMon > SoLuong)
+            {
+                MessageBox.Show("Số lượng trả món phải nhỏ hơn số lượng đã gọi",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                return;
+            }
+
+            chitiet.SOLUONG -= SoLuongTraMon;
+            if (chitiet.SOLUONG == 0) db.CHITIETHOADONs.Remove(chitiet);
+
+            try
+            {
+                hd.TONGTIEN -= SoLuongTraMon * chitiet.DONGIA;
+
+                KHO kho = db.KHOes.Where(p => p.MATHANGID == chitiet.MATHANGID).FirstOrDefault();
+                kho.SOLUONG += SoLuongTraMon;
+
+                db.SaveChanges();
+                MessageBox.Show("Trả món thành công",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Trả món thất bại",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            finally
+            {
+                UpdateDetail(IDBanAn);
+            }
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if (IDBanAn == 0)
+            {
+                MessageBox.Show("Chưa có bàn ăn nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            /// Kiểm tra xem bàn ăn là bàn đã có khách hay chưa có khách
+            BANAN banan = db.BANANs.Where(p => p.ID == IDBanAn).FirstOrDefault();
+            if (banan.HOADONID == null)
+            {
+                MessageBox.Show("Bàn ăn không có khách",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            int idBanAnMoi = (int)cbxCBBanAn.EditValue;
+            BANAN bananmoi = db.BANANs.Where(p => p.ID == idBanAnMoi).FirstOrDefault();
+
+            bananmoi.TRANGTHAI = 1;
+            bananmoi.HOADONID = banan.HOADONID;
+            banan.TRANGTHAI = 0;
+            banan.HOADONID = null;
+
+            try
+            {
+                db.SaveChanges();
+                IDBanAn = idBanAnMoi;
+                UpdateDetail(idBanAnMoi);
+
+                UpdateDsBanAn();
+
+                MessageBox.Show("Chuyển bàn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Chuyển bản thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 

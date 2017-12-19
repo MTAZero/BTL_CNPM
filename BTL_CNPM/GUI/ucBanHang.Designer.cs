@@ -42,6 +42,7 @@
             this.ThanhTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbxCBBanAn = new DevExpress.XtraEditors.LookUpEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.btnChuyenBan = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -50,6 +51,7 @@
             this.txtTMSoLuong = new System.Windows.Forms.NumericUpDown();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cbxGMMatHang = new DevExpress.XtraEditors.LookUpEdit();
             this.txtGMSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.txtTenBanAn = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelDsBanAn = new System.Windows.Forms.FlowLayoutPanel();
-            this.cbxGMMatHang = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbxCBBanAn = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,15 +70,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCBBanAn.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTMSoLuong)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGMMatHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGMSoLuong)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGMMatHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxCBBanAn.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -246,6 +246,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chuyển bàn";
             // 
+            // cbxCBBanAn
+            // 
+            this.cbxCBBanAn.Location = new System.Drawing.Point(83, 21);
+            this.cbxCBBanAn.Name = "cbxCBBanAn";
+            this.cbxCBBanAn.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxCBBanAn.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCBBanAn.Properties.Appearance.Options.UseFont = true;
+            this.cbxCBBanAn.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCBBanAn.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxCBBanAn.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCBBanAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxCBBanAn.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCBBanAn.Properties.ShowHeader = false;
+            this.cbxCBBanAn.Size = new System.Drawing.Size(281, 26);
+            this.cbxCBBanAn.TabIndex = 48;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -266,6 +283,7 @@
             this.btnChuyenBan.Size = new System.Drawing.Size(355, 34);
             this.btnChuyenBan.TabIndex = 45;
             this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
             // 
             // groupBox3
             // 
@@ -300,6 +318,7 @@
             this.btnTraMon.Size = new System.Drawing.Size(188, 34);
             this.btnTraMon.TabIndex = 39;
             this.btnTraMon.Text = "Trả món";
+            this.btnTraMon.Click += new System.EventHandler(this.btnTraMon_Click);
             // 
             // txtTMSoLuong
             // 
@@ -344,6 +363,23 @@
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
             // 
+            // cbxGMMatHang
+            // 
+            this.cbxGMMatHang.Location = new System.Drawing.Point(86, 16);
+            this.cbxGMMatHang.Name = "cbxGMMatHang";
+            this.cbxGMMatHang.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxGMMatHang.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGMMatHang.Properties.Appearance.Options.UseFont = true;
+            this.cbxGMMatHang.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGMMatHang.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxGMMatHang.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGMMatHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxGMMatHang.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGMMatHang.Properties.ShowHeader = false;
+            this.cbxGMMatHang.Size = new System.Drawing.Size(233, 26);
+            this.cbxGMMatHang.TabIndex = 34;
+            // 
             // txtGMSoLuong
             // 
             this.txtGMSoLuong.Location = new System.Drawing.Point(398, 18);
@@ -386,11 +422,12 @@
             this.btnGoiMon.Appearance.Options.UseFont = true;
             this.btnGoiMon.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnGoiMon.Image = ((System.Drawing.Image)(resources.GetObject("btnGoiMon.Image")));
-            this.btnGoiMon.Location = new System.Drawing.Point(460, 11);
+            this.btnGoiMon.Location = new System.Drawing.Point(458, 11);
             this.btnGoiMon.Name = "btnGoiMon";
-            this.btnGoiMon.Size = new System.Drawing.Size(107, 34);
+            this.btnGoiMon.Size = new System.Drawing.Size(106, 34);
             this.btnGoiMon.TabIndex = 29;
             this.btnGoiMon.Text = "Gọi món";
+            this.btnGoiMon.Click += new System.EventHandler(this.btnGoiMon_Click);
             // 
             // panel3
             // 
@@ -415,6 +452,7 @@
             this.btnThanhToan.Size = new System.Drawing.Size(107, 34);
             this.btnThanhToan.TabIndex = 18;
             this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // txtTongTien
             // 
@@ -458,40 +496,6 @@
             this.panelDsBanAn.Size = new System.Drawing.Size(691, 503);
             this.panelDsBanAn.TabIndex = 0;
             // 
-            // cbxGMMatHang
-            // 
-            this.cbxGMMatHang.Location = new System.Drawing.Point(86, 16);
-            this.cbxGMMatHang.Name = "cbxGMMatHang";
-            this.cbxGMMatHang.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxGMMatHang.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGMMatHang.Properties.Appearance.Options.UseFont = true;
-            this.cbxGMMatHang.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGMMatHang.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxGMMatHang.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGMMatHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxGMMatHang.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGMMatHang.Properties.ShowHeader = false;
-            this.cbxGMMatHang.Size = new System.Drawing.Size(233, 26);
-            this.cbxGMMatHang.TabIndex = 34;
-            // 
-            // cbxCBBanAn
-            // 
-            this.cbxCBBanAn.Location = new System.Drawing.Point(83, 21);
-            this.cbxCBBanAn.Name = "cbxCBBanAn";
-            this.cbxCBBanAn.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxCBBanAn.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxCBBanAn.Properties.Appearance.Options.UseFont = true;
-            this.cbxCBBanAn.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxCBBanAn.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxCBBanAn.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxCBBanAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxCBBanAn.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxCBBanAn.Properties.ShowHeader = false;
-            this.cbxCBBanAn.Size = new System.Drawing.Size(281, 26);
-            this.cbxCBBanAn.TabIndex = 48;
-            // 
             // ucBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,18 +513,18 @@
             this.panel5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCBBanAn.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTMSoLuong)).EndInit();
             this.panel4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGMMatHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGMSoLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGMMatHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxCBBanAn.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,7 +29,7 @@ namespace BTL_CNPM.GUI
         #endregion
 
         #region LoadForm
-        private void ucBanAn_Load(object sender, EventArgs e)
+        private void LoadStatus()
         {
             btnBanAn.Text = ban.TEN;
 
@@ -41,6 +41,15 @@ namespace BTL_CNPM.GUI
             {
                 this.btnBanAn.Image = ((System.Drawing.Image)(resources.GetObject("busy")));
             }
+        }
+        private void ucBanAn_Load(object sender, EventArgs e)
+        {
+            LoadStatus();
+        }
+
+        public void Refresh()
+        {
+            LoadStatus();
         }
         #endregion
     }

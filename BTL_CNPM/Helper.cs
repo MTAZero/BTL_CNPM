@@ -58,6 +58,8 @@ namespace BTL_CNPM
 
         #endregion
 
-
+        #region Session
+        public static NHANVIEN nhanvien = db.NHANVIENs.FirstOrDefault();
+        #endregion
     }
 }
