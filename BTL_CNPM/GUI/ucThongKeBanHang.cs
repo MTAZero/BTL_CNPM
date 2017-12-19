@@ -36,8 +36,10 @@ namespace BTL_CNPM.GUI
                                              MatHang = mathang.TEN,
                                              DonGia = mathang.GIABAN,
                                              SoLuong = Helper.SoLuong(mathang, dateBatDau.DateTime, dateKetThuc.DateTime),
-                                             ThanhTien = ((int)mathang.GIABAN * Helper.SoLuong(mathang, dateBatDau.DateTime, dateKetThuc.DateTime)).ToString("N0")
+                                             ThanhTien = ((int)mathang.GIABAN * Helper.SoLuong(mathang, dateBatDau.DateTime, dateKetThuc.DateTime)).ToString("N0"),
+                                             gt = ((int)mathang.GIABAN * Helper.SoLuong(mathang, dateBatDau.DateTime, dateKetThuc.DateTime))
                                          })
+                                         .OrderByDescending(p=>p.gt)
                                         .ToList();
             dgvMatHangMain.DataSource = listMatHang;
 
