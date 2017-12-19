@@ -45,6 +45,7 @@ namespace BTL_CNPM.GUI
         {
             btnLapPhieuNhap.Enabled = false;
             groupChiTietNhap.Enabled = true;
+            btnLuuPhieuNhap.Enabled = true;
 
             txtMaPhieuNhap.Enabled = false;
             dateNgayNhap.Enabled = false;
@@ -151,9 +152,8 @@ namespace BTL_CNPM.GUI
         private void ClearControl()
         {
             cbxMatHang.ItemIndex = 0;
-            txtDonViTinh.Text = "";
+            txtDonGia.Text = "";
             txtSoLuong.Value = 1;
-            txtDonViTinh.Text = "";
         }
 
         private void UpdateDetail()
@@ -161,16 +161,19 @@ namespace BTL_CNPM.GUI
             try
             {
                 CHITIETNHAP tg = getCHITIETNHAPByID();
+                txtTongTien.Text = ((int)Helper.phieunhap.TONGTIEN).ToString("N0");
+                txtChiPhi.Text = ((int)Helper.phieunhap.TONGTIEN).ToString("N0");
+
+                int id = (int)cbxMatHang.EditValue;
+                txtDonViTinh.Text = db.MATHANGs.Where(p => p.ID == id).FirstOrDefault().DONVITINH;
 
                 if (tg.ID == 0) return;
 
-                txtTongTien.Text = ((int)Helper.phieunhap.TONGTIEN).ToString("N0");
-                txtChiPhi.Text = ((int)Helper.phieunhap.TONGTIEN).ToString("N0");
+                
                 cbxMatHang.ItemIndex = (int)tg.MATHANGID;
                 txtDonViTinh.Text = "";
                 txtSoLuong.Value = (int)tg.SOLUONG;
 
-                
             }
             catch
             {
@@ -285,7 +288,7 @@ namespace BTL_CNPM.GUI
 
         private void btnHoanThanhPhieuNhap_Click(object sender, EventArgs e)
         {
-            Helper.phieunhap = new PHIEUNHAP();
+            
 
             MessageBox.Show("Lưu thông tin phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LockPhieuNhap();
@@ -302,6 +305,10 @@ namespace BTL_CNPM.GUI
             catch
             {
 
+            }
+            finally
+            {
+                Helper.phieunhap = new PHIEUNHAP();
             }
 
 
@@ -342,6 +349,7 @@ namespace BTL_CNPM.GUI
                         db.SaveChanges();
 
                         Helper.phieunhap.TONGTIEN += moi.SOLUONG * moi.DONGIA;
+                        db.SaveChanges();
 
                         MessageBox.Show("Thêm thông tin chi tiết nhập thành công",
                                         "Thông báo",

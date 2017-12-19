@@ -168,17 +168,17 @@
     <Compile Include="GUI\ucNhapHang.Designer.cs">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucThongKeDoanhThu.cs">
+    <Compile Include="GUI\ucThongKeHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucThongKeDoanhThu.Designer.cs">
-      <DependentUpon>ucThongKeDoanhThu.cs</DependentUpon>
+    <Compile Include="GUI\ucThongKeHoaDon.Designer.cs">
+      <DependentUpon>ucThongKeHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucThongKeHangHoa.cs">
+    <Compile Include="GUI\ucThongKePhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucThongKeHangHoa.Designer.cs">
-      <DependentUpon>ucThongKeHangHoa.cs</DependentUpon>
+    <Compile Include="GUI\ucThongKePhieuNhap.Designer.cs">
+      <DependentUpon>ucThongKePhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
@@ -222,11 +222,11 @@
     <EmbeddedResource Include="GUI\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucThongKeDoanhThu.resx">
-      <DependentUpon>ucThongKeDoanhThu.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucThongKeHoaDon.resx">
+      <DependentUpon>ucThongKeHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucThongKeHangHoa.resx">
-      <DependentUpon>ucThongKeHangHoa.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucThongKePhieuNhap.resx">
+      <DependentUpon>ucThongKePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -393,7 +393,7 @@ namespace BTL_CNPM.GUI
             }
 
             chitiet.SOLUONG -= SoLuongTraMon;
-            if (chitiet.SOLUONG == 0) db.CHITIETHOADONs.Remove(chitiet);
+            
 
             try
             {
@@ -402,6 +402,7 @@ namespace BTL_CNPM.GUI
                 KHO kho = db.KHOes.Where(p => p.MATHANGID == chitiet.MATHANGID).FirstOrDefault();
                 kho.SOLUONG += SoLuongTraMon;
 
+                if (chitiet.SOLUONG == 0) db.CHITIETHOADONs.Remove(chitiet);
                 db.SaveChanges();
                 MessageBox.Show("Trả món thành công",
                                 "Thông báo",

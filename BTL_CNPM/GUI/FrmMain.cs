@@ -44,22 +44,6 @@ namespace BTL_CNPM.GUI
             panelMain.Controls.Add(uc);
         }
 
-        private void barThongKe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            panelMain.Controls.Clear();
-            ucThongKeHangHoa uc = new ucThongKeHangHoa();
-            uc.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(uc);
-        }
-
-        private void barThongKeDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            panelMain.Controls.Clear();
-            ucThongKeDoanhThu uc = new ucThongKeDoanhThu();
-            uc.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(uc);
-        }
-
         private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmThongTinCaNhan form = new FrmThongTinCaNhan();
@@ -118,6 +102,30 @@ namespace BTL_CNPM.GUI
             DialogResult rs = MessageBox.Show("Bạn có chắc chắn đăng xuất", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (rs == DialogResult.Cancel) return;
             this.Close();
+        }
+
+        private void barThongKePhieuNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucThongKePhieuNhap uc = new ucThongKePhieuNhap();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barThongKeHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucThongKeHoaDon uc = new ucThongKeHoaDon();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barThongKeBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucDanhSachBanAn uc = new ucDanhSachBanAn();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
         }
     }
 }
