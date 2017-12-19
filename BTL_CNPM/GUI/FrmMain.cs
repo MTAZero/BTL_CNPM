@@ -123,7 +123,7 @@ namespace BTL_CNPM.GUI
         private void barThongKeBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             panelMain.Controls.Clear();
-            ucDanhSachBanAn uc = new ucDanhSachBanAn();
+            ucThongKeBanHang uc = new ucThongKeBanHang();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }

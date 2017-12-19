@@ -56,6 +56,19 @@ namespace BTL_CNPM
             return returnImage;
         }
 
+        public static int SoLuong(MATHANG a, DateTime batdau, DateTime ketthuc)
+        {
+            int ans = (
+                        from chitiet in db.CHITIETHOADONs.Where(p => p.MATHANGID == a.ID).ToList()
+                        from hoadon in db.HOADONs.Where(p => p.ID == chitiet.HOADONID && p.NGAYNHAP >= batdau && p.NGAYNHAP <= ketthuc).ToList()
+                        select chitiet
+                      )
+                      .ToList()
+                      .Sum(p => (int)p.SOLUONG);
+
+            return ans;
+        }
+
         #endregion
 
         #region Session
