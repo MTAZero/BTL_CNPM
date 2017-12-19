@@ -43,7 +43,7 @@ namespace BTL_CNPM.GUI
                                         .ToList();
             dgvMatHangMain.DataSource = listMatHang;
 
-            chartThongKe.DataSource = listMatHang;
+            chartThongKe.DataSource = listMatHang.Where(p => p.gt > 0).ToList();
             chartThongKe.Series[0].XValueMember = "MatHang";
             chartThongKe.Series[0].XValueType = ChartValueType.String;
             chartThongKe.Series[0].YValueMembers = "ThanhTien";
