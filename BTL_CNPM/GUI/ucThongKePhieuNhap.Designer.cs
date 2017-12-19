@@ -451,6 +451,8 @@
             // 
             // STT
             // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.STT.Caption = "TT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
@@ -469,6 +471,8 @@
             // 
             // DonGia
             // 
+            this.DonGia.AppearanceCell.Options.UseTextOptions = true;
+            this.DonGia.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.DonGia.Caption = "Đơn giá";
             this.DonGia.FieldName = "DonGia";
             this.DonGia.Name = "DonGia";
@@ -478,6 +482,8 @@
             // 
             // SoLuong
             // 
+            this.SoLuong.AppearanceCell.Options.UseTextOptions = true;
+            this.SoLuong.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.SoLuong.Caption = "Số lượng";
             this.SoLuong.FieldName = "SoLuong";
             this.SoLuong.Name = "SoLuong";
@@ -487,6 +493,8 @@
             // 
             // ThanhTien
             // 
+            this.ThanhTien.AppearanceCell.Options.UseTextOptions = true;
+            this.ThanhTien.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ThanhTien.Caption = "Thành tiền";
             this.ThanhTien.FieldName = "ThanhTien";
             this.ThanhTien.Name = "ThanhTien";

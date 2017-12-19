@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BTL_CNPM.Data;
 using DevExpress.XtraEditors;
+using BTL_CNPM.Report;
 
 namespace BTL_CNPM.GUI
 {
@@ -219,17 +220,27 @@ namespace BTL_CNPM.GUI
 
             try
             {
-                banan.TRANGTHAI = 0;
-                banan.HOADONID = null;
-                db.SaveChanges();
+                
 
                 if (rs == DialogResult.OK)
                 {
                     /// xuất report hóa đơn
-                     
+                    int ID = (int) banan.HOADONID;
+                    HOADON hd = db.HOADONs.Where(p => p.ID == ID).FirstOrDefault();
+                    int khuyenmai = (int)txtKhuyenMai.Value;
+
+                    FrmRpHoaDon form = new FrmRpHoaDon(hd, khuyenmai);
+                    form.ShowDialog();
+
+                    hd.KHUYENMAI = khuyenmai;
+                    db.SaveChanges();
 
                     MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
+                banan.TRANGTHAI = 0;
+                banan.HOADONID = null;
+                db.SaveChanges();
 
                 UpdateDsBanAn();
             }
@@ -280,6 +291,7 @@ namespace BTL_CNPM.GUI
                     hd.TONGTIEN = 0;
                     hd.NHANVIENID = Helper.nhanvien.ID;
                     hd.MAHOADON = "";
+                    hd.KHUYENMAI = 0;
                     db.HOADONs.Add(hd);
                     db.SaveChanges();
 
@@ -405,7 +417,21 @@ namespace BTL_CNPM.GUI
                 kho.SOLUONG += SoLuongTraMon;
 
                 if (chitiet.SOLUONG == 0) db.CHITIETHOADONs.Remove(chitiet);
+
                 db.SaveChanges();
+
+                int cnt = db.CHITIETHOADONs.Where(p => p.HOADONID == hd.ID).ToList().Count;
+                if (cnt == 0)
+                { 
+                    db.HOADONs.Remove(hd);
+                    db.SaveChanges();
+                    banan.HOADONID = null;
+                    banan.TRANGTHAI = 0;
+
+                    db.SaveChanges();
+                    UpdateDsBanAn();
+                }
+
                 MessageBox.Show("Trả món thành công",
                                 "Thông báo",
                                 MessageBoxButtons.OK,

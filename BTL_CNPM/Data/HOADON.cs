@@ -26,6 +26,8 @@ namespace BTL_CNPM.Data
 
         public int? TONGTIEN { get; set; }
 
+        public int? KHUYENMAI { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BANAN> BANANs { get; set; }
 

@@ -57,6 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGoiMon = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtKhuyenMai = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
             this.txtTongTien = new System.Windows.Forms.Label();
             this.txtTenBanAn = new System.Windows.Forms.Label();
@@ -78,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxGMMatHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGMSoLuong)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhuyenMai)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -432,6 +435,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.txtKhuyenMai);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Controls.Add(this.txtTongTien);
             this.panel3.Controls.Add(this.txtTenBanAn);
@@ -440,6 +445,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(570, 47);
             this.panel3.TabIndex = 15;
+            // 
+            // txtKhuyenMai
+            // 
+            this.txtKhuyenMai.Location = new System.Drawing.Point(351, 13);
+            this.txtKhuyenMai.Name = "txtKhuyenMai";
+            this.txtKhuyenMai.Size = new System.Drawing.Size(78, 24);
+            this.txtKhuyenMai.TabIndex = 34;
+            this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(217, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Khuyến mại (%) : ";
             // 
             // btnThanhToan
             // 
@@ -524,6 +547,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGMSoLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhuyenMai)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -563,5 +587,7 @@
         private DevExpress.XtraEditors.SimpleButton btnGoiMon;
         private DevExpress.XtraEditors.LookUpEdit cbxCBBanAn;
         private DevExpress.XtraEditors.LookUpEdit cbxGMMatHang;
+        private System.Windows.Forms.NumericUpDown txtKhuyenMai;
+        private System.Windows.Forms.Label label2;
     }
 }

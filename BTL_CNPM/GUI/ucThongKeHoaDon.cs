@@ -141,7 +141,7 @@ namespace BTL_CNPM.GUI
             {
                 int ID = (int)dgvPhieuNhap.GetFocusedRowCellValue("ID");
                 HOADON hd = db.HOADONs.Where(p => p.ID == ID).FirstOrDefault();
-                FrmRpHoaDon form = new FrmRpHoaDon(hd, 25);
+                FrmRpHoaDon form = new FrmRpHoaDon(hd, (int) hd.KHUYENMAI);
                 form.ShowDialog();
             }
             catch

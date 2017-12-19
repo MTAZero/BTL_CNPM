@@ -32,6 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvMatHangMain = new DevExpress.XtraGrid.GridControl();
             this.dgvMatHang = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -45,9 +47,9 @@
             this.dateBatDau = new DevExpress.XtraEditors.DateEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatHangMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).BeginInit();
@@ -56,8 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +72,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1308, 548);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.chartThongKe);
+            this.groupBox2.Location = new System.Drawing.Point(18, 123);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(439, 406);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thống kê lượng hàng đã bán";
+            // 
+            // chartThongKe
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            this.chartThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartThongKe.Legends.Add(legend1);
+            this.chartThongKe.Location = new System.Drawing.Point(4, 21);
+            this.chartThongKe.Name = "chartThongKe";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Times New Roman", 9F);
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
+            series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
+            this.chartThongKe.Series.Add(series1);
+            this.chartThongKe.Size = new System.Drawing.Size(431, 381);
+            this.chartThongKe.TabIndex = 4;
+            this.chartThongKe.Text = "chart1";
             // 
             // groupBox3
             // 
@@ -130,6 +164,8 @@
             // 
             // STT
             // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.STT.Caption = "TT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
@@ -148,6 +184,8 @@
             // 
             // DonGia
             // 
+            this.DonGia.AppearanceCell.Options.UseTextOptions = true;
+            this.DonGia.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.DonGia.Caption = "Đơn giá";
             this.DonGia.FieldName = "DonGia";
             this.DonGia.Name = "DonGia";
@@ -157,6 +195,8 @@
             // 
             // SoLuong
             // 
+            this.SoLuong.AppearanceCell.Options.UseTextOptions = true;
+            this.SoLuong.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.SoLuong.Caption = "Số lượng";
             this.SoLuong.FieldName = "SoLuong";
             this.SoLuong.Name = "SoLuong";
@@ -166,6 +206,8 @@
             // 
             // ThanhTien
             // 
+            this.ThanhTien.AppearanceCell.Options.UseTextOptions = true;
+            this.ThanhTien.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ThanhTien.Caption = "Thành tiền";
             this.ThanhTien.FieldName = "ThanhTien";
             this.ThanhTien.Name = "ThanhTien";
@@ -244,40 +286,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Từ ngày : ";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.chartThongKe);
-            this.groupBox2.Location = new System.Drawing.Point(18, 123);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(439, 406);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thống kê lượng hàng đã bán";
-            // 
-            // chartThongKe
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartThongKe.ChartAreas.Add(chartArea1);
-            this.chartThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartThongKe.Legends.Add(legend1);
-            this.chartThongKe.Location = new System.Drawing.Point(4, 21);
-            this.chartThongKe.Name = "chartThongKe";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("Times New Roman", 9F);
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
-            series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
-            this.chartThongKe.Series.Add(series1);
-            this.chartThongKe.Size = new System.Drawing.Size(431, 381);
-            this.chartThongKe.TabIndex = 4;
-            this.chartThongKe.Text = "chart1";
-            // 
             // ucThongKeBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +295,8 @@
             this.Size = new System.Drawing.Size(1308, 548);
             this.Load += new System.EventHandler(this.ucThongKeBanHang_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatHangMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).EndInit();
@@ -296,8 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.ResumeLayout(false);
 
         }
