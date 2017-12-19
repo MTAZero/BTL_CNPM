@@ -339,6 +339,13 @@ namespace BTL_CNPM.GUI
 
                     NHANVIEN cu = getNhanVienByID();
                     NHANVIEN moi = getNhanVienByForm();
+
+                    if (cu == Helper.nhanvien && moi.CHUCVU == 0)
+                    {
+                        MessageBox.Show("Bạn không được sửa quyền của chính mình", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     CapNhat(ref cu, moi);
 
                     try
@@ -370,6 +377,13 @@ namespace BTL_CNPM.GUI
                 if (!CheckLuaChon()) return;
 
                 NHANVIEN cu = getNhanVienByID();
+
+                if (cu == Helper.nhanvien)
+                {
+                    MessageBox.Show("Bạn không được phép xóa chính mình", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa nhân viên " + cu.TEN + "?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,

@@ -103,5 +103,21 @@ namespace BTL_CNPM.GUI
         }
         #endregion
 
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            if (Helper.nhanvien.CHUCVU == 0) tabAdmin.Visible = false; else tabAdmin.Visible = true;
+
+            panelMain.Controls.Clear();
+            ucBanHang uc = new ucBanHang();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn đăng xuất", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Cancel) return;
+            this.Close();
+        }
     }
 }

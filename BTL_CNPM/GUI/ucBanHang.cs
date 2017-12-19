@@ -142,6 +142,9 @@ namespace BTL_CNPM.GUI
             LoadInitControl();
             ClearControl();
             LoadDsBanAn();
+
+            IDBanAn = db.BANANs.FirstOrDefault().ID;
+            UpdateDetail(IDBanAn);
         }
         #endregion
 

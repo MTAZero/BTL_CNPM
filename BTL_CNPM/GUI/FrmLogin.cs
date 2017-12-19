@@ -63,6 +63,8 @@ namespace BTL_CNPM.GUI
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
 
+            Helper.nhanvien = db.NHANVIENs.Where(p => p.TAIKHOAN == taikhoan && p.MATKHAU == matkhau).FirstOrDefault();
+
             FrmMain form = new FrmMain();
             this.Hide();
             form.ShowDialog();
@@ -70,6 +72,7 @@ namespace BTL_CNPM.GUI
             txtTaiKhoan.Text = "";
             txtMatKhau.Text = "";
             this.Focus();
+            this.Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

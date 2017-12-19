@@ -71,6 +71,7 @@
             this.btnHuy.Size = new System.Drawing.Size(119, 39);
             this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnDoiMatKhau
             // 
@@ -83,6 +84,7 @@
             this.btnDoiMatKhau.Size = new System.Drawing.Size(119, 39);
             this.btnDoiMatKhau.TabIndex = 6;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // txtXacNhan
             // 
@@ -90,6 +92,7 @@
             this.txtXacNhan.Name = "txtXacNhan";
             this.txtXacNhan.Size = new System.Drawing.Size(243, 24);
             this.txtXacNhan.TabIndex = 5;
+            this.txtXacNhan.UseSystemPasswordChar = true;
             // 
             // txtMatKhauMoi
             // 
@@ -97,6 +100,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(243, 24);
             this.txtMatKhauMoi.TabIndex = 4;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
             // 
             // txtMatKhauCu
             // 
@@ -104,6 +108,7 @@
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(243, 24);
             this.txtMatKhauCu.TabIndex = 3;
+            this.txtMatKhauCu.UseSystemPasswordChar = true;
             // 
             // label3
             // 
