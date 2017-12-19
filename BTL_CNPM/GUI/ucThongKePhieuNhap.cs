@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BTL_CNPM.Data;
+using BTL_CNPM.Report;
 
 namespace BTL_CNPM.GUI
 {
@@ -136,21 +137,21 @@ namespace BTL_CNPM.GUI
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int ID = (int)dgvPhieuNhap.GetFocusedRowCellValue("ID");
-            //    PHIEUNHAP hd = db.PHIEUNHAPs.Where(p => p.ID == ID).FirstOrDefault();
-            //    FrmRpPhieuNhap form = new FrmRpPhieuNhap(hd);
-            //    form.ShowDialog();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Chưa có phiếu nhập nào được chọn",
-            //                    "Thông báo",
-            //                    MessageBoxButtons.OK,
-            //                    MessageBoxIcon.Error);
-            //    return;
-            //}
+            try
+            {
+                int ID = (int)dgvPhieuNhap.GetFocusedRowCellValue("ID");
+                PHIEUNHAP hd = db.PHIEUNHAPs.Where(p => p.ID == ID).FirstOrDefault();
+                FrmRpPhieuNhap form = new FrmRpPhieuNhap(hd);
+                form.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có phiếu nhập nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
         }
 
     }
