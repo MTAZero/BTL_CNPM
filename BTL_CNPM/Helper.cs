@@ -60,6 +60,7 @@ namespace BTL_CNPM
 
         #region Session
         public static NHANVIEN nhanvien = db.NHANVIENs.FirstOrDefault();
+        public static PHIEUNHAP phieunhap = new PHIEUNHAP();
         #endregion
     }
 }
