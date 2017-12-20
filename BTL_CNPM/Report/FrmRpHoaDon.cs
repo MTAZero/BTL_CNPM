@@ -36,14 +36,15 @@ namespace BTL_CNPM.Report
         {
             // CHi tiết hóa đơn
             int i = 0;
-            HOADONBindingSource.DataSource = db.CHITIETHOADONs.Where(p => p.HOADONID == hd.ID).ToList()
+            hOADONBindingSource.DataSource = db.CHITIETHOADONs.Where(p => p.HOADONID == hd.ID).ToList()
                                              .Select(p => new
                                              {
                                                  STT = ++i,
                                                  MatHang = db.MATHANGs.Where(k => k.ID == p.MATHANGID).FirstOrDefault().TEN,
                                                  SoLuong = p.SOLUONG,
                                                  DonGia = ((int)p.DONGIA).ToString("N0"),
-                                                 ThanhTien = ((int)p.THANHTIEN).ToString("N0")
+                                                 ThanhTien = ((int)p.THANHTIEN).ToString("N0"),
+                                                 DonViTinh = db.MATHANGs.Where(k=>k.ID == p.MATHANGID).FirstOrDefault().DONVITINH
                                              })
                                              .ToList();
 
@@ -68,6 +69,7 @@ namespace BTL_CNPM.Report
 
 
             this.rpViewerHoaDon.LocalReport.Refresh();
+            this.rpViewerHoaDon.RefreshReport();
             this.rpViewerHoaDon.RefreshReport();
         }
     }

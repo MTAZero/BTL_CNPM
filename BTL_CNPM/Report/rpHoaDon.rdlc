@@ -26,7 +26,7 @@
         <Top>1.5846cm</Top>
         <Left>0.47307cm</Left>
         <Height>0.73229cm</Height>
-        <Width>19.99776cm</Width>
+        <Width>19.91419cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -153,8 +153,8 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.49328cm</Top>
         <Left>0.47307cm</Left>
-        <Height>2.20514cm</Height>
-        <Width>19.99776cm</Width>
+        <Height>2.09931cm</Height>
+        <Width>19.96248cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -231,16 +231,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.99779cm</Width>
+              <Width>5.90907cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.01342cm</Width>
+              <Width>3.16146cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.25154cm</Width>
+              <Width>3.1403cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.99701cm</Width>
+              <Width>3.11383cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.45955cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -255,6 +258,13 @@
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
+                            <TextRun>
+                              <Value xml:space="preserve">   </Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
                             <TextRun>
                               <Value>=Fields!MatHang.Value</Value>
                               <Style>
@@ -303,7 +313,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DonGia">
+                    <Textbox Name="DonViTinh">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -316,8 +326,62 @@
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>DonViTinh</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="DonGia">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">  </Value>
+                              <Value>=Fields!SoLuong.Value</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve">     </Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -325,7 +389,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -378,7 +442,7 @@
                               </Style>
                             </TextRun>
                             <TextRun>
-                              <Value>=Fields!SoLuong.Value</Value>
+                              <Value>=Fields!DonViTinh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -393,7 +457,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -564,7 +628,7 @@
               <TablixHeader>
                 <Size>0.67938cm</Size>
                 <CellContents>
-                  <Textbox Name="Textbox14">
+                  <Textbox Name="Textbox13">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -572,6 +636,64 @@
                         <TextRuns>
                           <TextRun>
                             <Value>Đơn giá</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>12pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox13</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.67938cm</Size>
+                <CellContents>
+                  <Textbox Name="Textbox14">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Số lượng</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
                               <FontSize>12pt</FontSize>
@@ -629,7 +751,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Số lượng</Value>
+                            <Value>Đvt</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
                               <FontSize>12pt</FontSize>
@@ -750,7 +872,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.738cm</Size>
+                <Size>1.16526cm</Size>
                 <CellContents>
                   <Textbox Name="STT">
                     <CanGrow>true</CanGrow>
@@ -811,7 +933,7 @@
         <Top>4.7337cm</Top>
         <Left>0.43779cm</Left>
         <Height>1.35876cm</Height>
-        <Width>19.99776cm</Width>
+        <Width>19.94947cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -826,7 +948,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tổng tiền     : </Value>
+                <Value>Tổng tiền    : </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -839,7 +961,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>6.37468cm</Top>
-        <Left>13.90499cm</Left>
+        <Left>13.82142cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>3</ZIndex>
@@ -883,7 +1005,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>6.37468cm</Top>
-        <Left>16.47382cm</Left>
+        <Left>16.39025cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>4</ZIndex>
@@ -948,7 +1070,7 @@
         <Top>0.28787cm</Top>
         <Left>0.47307cm</Left>
         <Height>1.15562cm</Height>
-        <Width>19.99776cm</Width>
+        <Width>19.91419cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -984,7 +1106,7 @@
         <Top>8.63328cm</Top>
         <Left>0.48608cm</Left>
         <Height>0.67938cm</Height>
-        <Width>20.03304cm</Width>
+        <Width>19.94947cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -1003,7 +1125,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Khuyến mại : </Value>
+                <Value>Khuyến mại: </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -1016,7 +1138,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.08051cm</Top>
-        <Left>13.90499cm</Left>
+        <Left>13.82142cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>7</ZIndex>
@@ -1060,7 +1182,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.08051cm</Top>
-        <Left>16.47382cm</Left>
+        <Left>16.39025cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>8</ZIndex>
@@ -1093,7 +1215,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Thanh toán  : </Value>
+                <Value>Thanh toán : </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -1106,7 +1228,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.8569cm</Top>
-        <Left>13.90499cm</Left>
+        <Left>13.82142cm</Left>
         <Height>0.70583cm</Height>
         <Width>2.53355cm</Width>
         <ZIndex>10</ZIndex>
@@ -1150,7 +1272,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.8569cm</Top>
-        <Left>16.47382cm</Left>
+        <Left>16.39025cm</Left>
         <Height>0.70583cm</Height>
         <Width>3.99701cm</Width>
         <ZIndex>11</ZIndex>
@@ -1168,7 +1290,7 @@
     <Height>9.93167cm</Height>
     <Style />
   </Body>
-  <Width>21cm</Width>
+  <Width>20.76597cm</Width>
   <Page>
     <PageHeight>14.8cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -1186,7 +1308,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3639b6c5-5ccc-4acc-a818-710f5519060f</rd:DataSourceID>
+      <rd:DataSourceID>71a5b4cd-ee95-47c3-a17c-2725443c98cb</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1216,10 +1338,14 @@
           <DataField>ThanhTien</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DonViTinh">
+          <DataField>DonViTinh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>rpDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\Work\2017\Winform\Anh Long\Tháng 11-2017\QL Bán sách - 1800k\Code\BookShop\BookShop\Report\rpDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Study\ClassMTA\Kì 1 năm 2017 - 2018\Công nghệ phần mềm\Bài tập lớn\BTL_CNPM\BTL_CNPM\Report\rpDataSet.xsd</rd:SchemaPath>
         <rd:TableName>HOADON</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

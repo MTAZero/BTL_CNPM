@@ -29,7 +29,7 @@ namespace BTL_CNPM.Report
 
             // CHi tiết phiếu nhập
             int i = 0;
-            HOADONBindingSource.DataSource = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == hd.ID).ToList()
+            hOADONBindingSource.DataSource = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == hd.ID).ToList()
                                              .Select(p => new
                                              {
                                                  STT = ++i,

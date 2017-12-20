@@ -32,11 +32,11 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rpViewerHoaDon = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.rpDataSet = new BTL_CNPM.Report.rpDataSet();
-            this.HOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rpDataSet1 = new BTL_CNPM.Report.rpDataSet();
+            this.hOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HOADONBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,7 +53,7 @@
             // 
             this.rpViewerHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "HoaDon";
-            reportDataSource1.Value = this.HOADONBindingSource;
+            reportDataSource1.Value = this.hOADONBindingSource;
             this.rpViewerHoaDon.LocalReport.DataSources.Add(reportDataSource1);
             this.rpViewerHoaDon.LocalReport.ReportEmbeddedResource = "BTL_CNPM.Report.rpPhieuNhap.rdlc";
             this.rpViewerHoaDon.Location = new System.Drawing.Point(0, 0);
@@ -61,15 +61,15 @@
             this.rpViewerHoaDon.Size = new System.Drawing.Size(806, 504);
             this.rpViewerHoaDon.TabIndex = 0;
             // 
-            // rpDataSet
+            // rpDataSet1
             // 
-            this.rpDataSet.DataSetName = "rpDataSet";
-            this.rpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.rpDataSet1.DataSetName = "rpDataSet";
+            this.rpDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // HOADONBindingSource
+            // hOADONBindingSource
             // 
-            this.HOADONBindingSource.DataMember = "HOADON";
-            this.HOADONBindingSource.DataSource = this.rpDataSet;
+            this.hOADONBindingSource.DataMember = "HOADON";
+            this.hOADONBindingSource.DataSource = this.rpDataSet1;
             // 
             // FrmRpPhieuNhap
             // 
@@ -83,8 +83,8 @@
             this.Text = "PHIẾU NHẬP HÀNG";
             this.Load += new System.EventHandler(this.FrmRpPhieuNhap_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HOADONBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,6 +94,7 @@
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer rpViewerHoaDon;
         private rpDataSet rpDataSet;
-        private System.Windows.Forms.BindingSource HOADONBindingSource;
+        private System.Windows.Forms.BindingSource hOADONBindingSource;
+        private rpDataSet rpDataSet1;
     }
 }
