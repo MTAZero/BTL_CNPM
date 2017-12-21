@@ -164,7 +164,6 @@
             this.ClientSize = new System.Drawing.Size(424, 496);
             this.Controls.Add(this.panel1);
             this.DisplayHeader = false;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);

@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RM.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -350,14 +353,15 @@
     <None Include="Resources\Nau.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CAFESHOP.mdf">
+    <Content Include="Database.txt" />
+    <Content Include="LocalDB\CAFESHOP.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="CAFESHOP_log.ldf">
+    <Content Include="LocalDB\CAFESHOP_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CAFESHOP.mdf</DependentUpon>
     </Content>
-    <Content Include="Database.txt" />
+    <Content Include="RM.ico" />
     <None Include="Resources\Quản lý nhà hàng.ico" />
     <None Include="Resources\free.png" />
     <None Include="Resources\busy.png" />
