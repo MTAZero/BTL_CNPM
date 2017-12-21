@@ -218,7 +218,6 @@
     </Compile>
     <Compile Include="Report\rpDataSet.cs">
       <DependentUpon>rpDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rpDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -326,6 +325,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.txt" />
+    <None Include="Resources\Quản lý nhà hàng.ico" />
     <None Include="Resources\free.png" />
     <None Include="Resources\busy.png" />
     <None Include="Resources\btnBanAn.Image.png" />

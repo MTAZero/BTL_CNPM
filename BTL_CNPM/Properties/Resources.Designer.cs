@@ -79,5 +79,15 @@ namespace BTL_CNPM.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Quản_lý_nhà_hàng {
+            get {
+                object obj = ResourceManager.GetObject("Quản_lý_nhà_hàng", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

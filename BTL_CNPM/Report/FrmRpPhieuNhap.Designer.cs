@@ -30,14 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRpPhieuNhap));
+            this.hOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rpDataSet1 = new BTL_CNPM.Report.rpDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rpViewerHoaDon = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.rpDataSet1 = new BTL_CNPM.Report.rpDataSet();
-            this.hOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // hOADONBindingSource
+            // 
+            this.hOADONBindingSource.DataMember = "HOADON";
+            this.hOADONBindingSource.DataSource = this.rpDataSet1;
+            // 
+            // rpDataSet1
+            // 
+            this.rpDataSet1.DataSetName = "rpDataSet";
+            this.rpDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -61,30 +72,21 @@
             this.rpViewerHoaDon.Size = new System.Drawing.Size(806, 504);
             this.rpViewerHoaDon.TabIndex = 0;
             // 
-            // rpDataSet1
-            // 
-            this.rpDataSet1.DataSetName = "rpDataSet";
-            this.rpDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hOADONBindingSource
-            // 
-            this.hOADONBindingSource.DataMember = "HOADON";
-            this.hOADONBindingSource.DataSource = this.rpDataSet1;
-            // 
             // FrmRpPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 586);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmRpPhieuNhap";
             this.Resizable = false;
             this.Text = "PHIẾU NHẬP HÀNG";
             this.Load += new System.EventHandler(this.FrmRpPhieuNhap_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOADONBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpDataSet1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
