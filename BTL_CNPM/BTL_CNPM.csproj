@@ -354,13 +354,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.txt" />
-    <Content Include="LocalDB\CAFESHOP.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LocalDB\CAFESHOP_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CAFESHOP.mdf</DependentUpon>
-    </Content>
     <Content Include="RM.ico" />
     <None Include="Resources\Quản lý nhà hàng.ico" />
     <None Include="Resources\free.png" />
